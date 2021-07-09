@@ -1,0 +1,50 @@
+use clase;
+
+db.Alumnos.insert(
+    {
+        "nombre":"Carlos",
+        "apellido":"Perez",
+        "edad":33
+    }
+);
+
+db.Alumnos.find();
+
+db.Alumnos.insert(
+[
+     {
+        "nombre":"Andres",
+        "apellido":"Angulo",
+        "edad":20
+    },
+     {
+        "nombre":"Maria",
+        "apellido":"Castro",
+        "WEB":"http:///mipagina.com"
+    }
+]
+);
+
+db.Alumnos.insert(
+    {
+        "nombre":"Ana",
+        "apellido":["Suarez","Monte"],
+        "edad":33
+    }
+);
+
+db.Alumnos.find({nombre:"Ana"});
+
+db.Alumnos.find().count();
+
+db.Alumnos.find().map(
+    function(d){
+        return d.nombre+", "+d.apellido+", "+d.edad;
+    }
+);
+
+//Permite el uso de SQL por ejemplo:
+
+select title
+from PuntosInfo;
+

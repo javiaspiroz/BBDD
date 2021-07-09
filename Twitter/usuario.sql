@@ -1,0 +1,9 @@
+CREATE TABLE IF NOT EXISTS usuario (
+	id_user INTEGER PRIMARY KEY,
+	email TEXT NOT NULL,
+	username TEXT NOT NULL UNIQUE,
+	psw TEXT NOT NULL,
+	user_type BOOL NOT NULL,
+	id_tw INTEGER,
+	FOREIGN KEY (id_tw) REFERENCES tweet(id_tw)
+);

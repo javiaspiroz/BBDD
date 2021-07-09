@@ -1,0 +1,9 @@
+CREATE TABLE IF NOT EXISTS tweet(
+	id_tw INTEGER PRIMARY KEY,
+	rts INTEGER NOT NULL,
+	likes INTEGER NOT NULL,
+	texto TEXT NOT NULL,
+	fecha datetime NOT NULL,
+	id_ans INTEGER,
+	FOREIGN KEY (id_ans) REFERENCES tweet(id_tw)
+);
